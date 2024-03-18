@@ -23,6 +23,10 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/github-issues', [GithubIssuesController::class, 'index'])->name('github-issues.index');
+Route::get('/github-issues/create', [GithubIssuesController::class, 'create'])->name('github-issues.create');
+Route::post('/github-issues', [GithubIssuesController::class, 'createIssue'])->name('github-issues.store');
+Route::post('/github-issues/{issue}/close', [GithubIssuesController::class, 'closeIssue'])->name('github-issues.close');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
