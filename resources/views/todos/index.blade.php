@@ -5,8 +5,12 @@
         </h2>
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold mb-4">Index todo</h1>
-        <h2 class="text-xl mb-4"><a href="{{ route('todos.create') }}" class="text-blue-500">Create todo</a></h2>
+        <h1 class="text-3xl font-bold mb-4">My To Do List</h1>
+        <div class="mb-4">
+            <a href="{{ route('todos.create') }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Create a todo task +
+            </a>
+        </div>
 
         @foreach ($todos as $todo)
             <div class="bg-white shadow-md rounded-md p-4 mb-4">

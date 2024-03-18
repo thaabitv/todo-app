@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold mb-4">Create todos</h1>
+        <h1 class="text-3xl font-bold mb-4">Fill Out Your Task details</h1>
 
         <form action="{{ route('todos.store') }}" method="POST" class="mb-8">
             @csrf
@@ -18,6 +18,16 @@
             <div class="mb-4">
                 <label for="description" class="block text-sm font-semibold text-gray-600">Description</label>
                 <input type="text" name="description" id="description" class="w-full p-2 border rounded-md">
+            </div>
+
+            <div class="mb-4">
+                <label for="assign_to" class="block text-sm font-semibold text-gray-600">Assign To</label>
+                <select name="assign_to" id="assign_to" class="w-full p-2 border rounded-md">
+                    <option value="0">Jeff</option>
+                    <option value="1">Steve</option>
+                    <option value="2">Bill</option>
+                    <option value="3">Mark</option>
+                </select>
             </div>
 
             <div class="mb-4">

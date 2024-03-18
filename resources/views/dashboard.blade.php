@@ -19,8 +19,15 @@
             @foreach ($todos as $todo)
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">{{$todo->title}}</h3>
+                    <p class="text-gray-600">{{$todo->assign_to}}</p>
                     <p class="text-gray-600">{{$todo->description}}</p>
                     <p class="text-blue-500">{{$todo->user->name}}</p>
+                    <p>
+                        <a href="{{ route('todos.show', $todo->id) }}" class="inline-block bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
+                            View
+                        </a>
+                    </p>
+   
                 </div>
             @endforeach
         </div>
