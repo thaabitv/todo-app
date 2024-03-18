@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('todos.index')" :active="request()->routeIs('todos.index')">
                         {{ __('Todos') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('github-issues.index')" :active="request()->routeIs('github-issues.index')">
+                        {{ __('GitHub Issues') }}
+                    </x-nav-link>
                 </div>
             </div>
 
